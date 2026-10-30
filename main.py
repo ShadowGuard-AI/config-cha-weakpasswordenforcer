@@ -155,21 +155,36 @@ def main():
     user_pass_list = load_users_passwords(args.userfile, args.passwordfile, args.configfile)
     weak_passwords = load_weak_passwords(args.weakpasswords)
 
+    flagged_users = 0
+
     for username, password in user_pass_list:
         logging.info(f"Checking password for user: {username}")
+        flagged = False
 
         if not args.disable_common and check_weak_password(password, weak_passwords):
             logging.warning(f"User: {username} - Password is a common weak password.")
+            flagged = True
 
         if not args.disable_pwned:
             pwned_count = check_pwned_password(password, args.threshold)
             if pwned_count > 0:
                 logging.warning(f"User: {username} - Password has been compromised and appears {pwned_count} times in the pwnedpasswords database.")
+                flagged = True
             elif pwned_count == -1:
                 logging.warning(f"User: {username} - Password check against pwnedpasswords failed.")
 
         if not args.disable_date and check_date_based_password(password):
             logging.warning(f"User: {username} - Password appears to be date-based.")
+            flagged = True
+
+        if flagged:
+            flagged_users += 1
+
+    if flagged_users:
+        logging.warning(f"{flagged_users} user(s) flagged for weak passwords.")
+        # An enforcer that exits 0 on flagged accounts cannot gate
+        # anything; scripts and CI read the exit code, not the log.
+        sys.exit(1)
 
 if __name__ == "__main__":
     main()
