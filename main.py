@@ -9,8 +9,11 @@ from dateutil.parser import parse as date_parse
 try:
     import pwnedpasswords as pwned
 except ImportError:
-    print("Error: pwnedpasswords library not found. Please install it using: pip install pwnedpasswords")
-    sys.exit(1)
+    # Optional at import time on purpose: --help and a run with
+    # --disable-pwned never call this library, so neither should die
+    # because it is absent. main() refuses a pwned check it cannot
+    # actually perform, below.
+    pwned = None
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -127,12 +130,16 @@ def check_pwned_password(password, threshold):
 
 def check_date_based_password(password):
     """
-    Checks if the password looks like a date.
+    Checks if the password is, as a whole, a date.
     """
     try:
-        date_parse(password, fuzzy=True)
+        # Whole string only. The fuzzy parser finds a "date" inside
+        # almost anything with digits (it accepted both
+        # "Str0ng-Uncommon-99" and "qwerty123"), which made this check
+        # flag ordinary passwords and taught users to ignore it.
+        date_parse(password.strip(), fuzzy=False)
         return True
-    except ValueError:
+    except (ValueError, OverflowError):
         return False
 
 def main():
@@ -140,6 +147,10 @@ def main():
     Main function to orchestrate the password checking process.
     """
     args = setup_argparse()
+
+    if not args.disable_pwned and pwned is None:
+        logging.error("pwnedpasswords is not installed, so the pwned check cannot run. Install it or pass --disable-pwned.")
+        sys.exit(1)
 
     user_pass_list = load_users_passwords(args.userfile, args.passwordfile, args.configfile)
     weak_passwords = load_weak_passwords(args.weakpasswords)
