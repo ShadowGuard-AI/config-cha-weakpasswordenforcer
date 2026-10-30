@@ -1,3 +1,5 @@
+![Banner](banner.png)
+
 # config-cha-WeakPasswordEnforcer
 Checks user accounts for weak or default passwords against a built-in dictionary and common patterns. Employs the `pwnedpasswords` library for checking against compromised password lists and `python-dateutil` for detecting date-based passwords. Reports accounts with potentially vulnerable credentials. - Focused on Automates the process of evaluating system and application configurations against security benchmarks (e.g., CIS). Allows users to define and apply hardening profiles, and provides remediation recommendations.
 
