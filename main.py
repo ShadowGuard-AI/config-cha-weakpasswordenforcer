@@ -73,6 +73,9 @@ def load_users_passwords(userfile, passwordfile, configfile):
                     logging.error("User and password files must have the same number of entries.")
                     sys.exit(1)
 
+                # I pair the two files by line position only. If one file has
+                # a blank line the other lacks, every pairing after it shifts
+                # and passwords get judged against the wrong user names.
                 user_pass_list = list(zip(users, passwords))
         except FileNotFoundError as e:
             logging.error(f"File not found: {e.filename}")
@@ -118,6 +121,9 @@ def check_pwned_password(password, threshold):
     """
     try:
         count = pwned.check(password)
+        # I treat reaching the threshold as compromised, not just
+        # passing it. With the default of 10, a password seen exactly
+        # 10 times is flagged, which the help text spells as more.
         if count >= threshold:
             return count
         return 0
@@ -170,6 +176,10 @@ def main():
             if pwned_count > 0:
                 logging.warning(f"User: {username} - Password has been compromised and appears {pwned_count} times in the pwnedpasswords database.")
                 flagged = True
+            # A failed lookup warns and does not flag the user. I prefer
+            # that over failing the whole run for one network error, but
+            # it does mean an offline run can pass accounts it never
+            # actually checked against the database.
             elif pwned_count == -1:
                 logging.warning(f"User: {username} - Password check against pwnedpasswords failed.")
 
