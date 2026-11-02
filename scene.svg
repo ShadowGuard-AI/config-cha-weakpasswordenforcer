@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" role="img" aria-label="Berkeley Square in three depths: still houses and railings, a nightingale singing in phrases on a low branch above a still microphone, and a carried lantern crossing the lower edge">
+<rect width="1200" height="520" fill="#221b12"/>
+<rect width="1200" height="300" fill="#39402c"/>
+<!-- far depth: curtained houses, railings, plane tree trunks: still -->
+<g fill="#5c4a32">
+<rect x="20" y="90" width="200" height="210"/><rect x="260" y="70" width="200" height="230"/><rect x="500" y="90" width="200" height="210"/><rect x="740" y="70" width="200" height="230"/><rect x="980" y="90" width="200" height="210"/>
+</g>
+<g fill="#2c241a">
+<rect x="48" y="120" width="30" height="42"/><rect x="110" y="120" width="30" height="42"/><rect x="548" y="120" width="30" height="42"/><rect x="790" y="120" width="30" height="42"/><rect x="1028" y="120" width="30" height="42"/>
+</g>
+<rect x="792" y="120" width="4" height="42" fill="#e9c056"/>
+<g stroke="#14100b" stroke-width="16"><line x1="150" y1="120" x2="150" y2="330"/><line x1="420" y1="110" x2="420" y2="330"/><line x1="680" y1="120" x2="680" y2="330"/><line x1="930" y1="110" x2="930" y2="330"/></g>
+<!-- outermost leaves stir faintly and settle, and stir again -->
+<g fill="#232a1a">
+<g><ellipse cx="150" cy="80" rx="110" ry="42"/><animateTransform attributeName="transform" type="rotate" values="0 150 80;1.2 150 80;0 150 80;-1 150 80;0 150 80" dur="9s" repeatCount="indefinite"/></g>
+<g><ellipse cx="680" cy="74" rx="120" ry="44"/><animateTransform attributeName="transform" type="rotate" values="0 680 74;-1.1 680 74;0 680 74;1 680 74;0 680 74" dur="11s" repeatCount="indefinite"/></g>
+<ellipse cx="420" cy="84" rx="105" ry="40"/><ellipse cx="930" cy="80" rx="110" ry="42"/>
+</g>
+<g stroke="#0e0b07" stroke-width="6"><line x1="0" y1="318" x2="1200" y2="318"/><line x1="0" y1="352" x2="1200" y2="352"/></g>
+<g stroke="#0e0b07" stroke-width="5">
+<line x1="30" y1="318" x2="30" y2="352"/><line x1="90" y1="318" x2="90" y2="352"/><line x1="150" y1="318" x2="150" y2="352"/><line x1="210" y1="318" x2="210" y2="352"/><line x1="270" y1="318" x2="270" y2="352"/><line x1="330" y1="318" x2="330" y2="352"/><line x1="390" y1="318" x2="390" y2="352"/><line x1="450" y1="318" x2="450" y2="352"/><line x1="510" y1="318" x2="510" y2="352"/><line x1="570" y1="318" x2="570" y2="352"/><line x1="630" y1="318" x2="630" y2="352"/><line x1="690" y1="318" x2="690" y2="352"/><line x1="750" y1="318" x2="750" y2="352"/><line x1="810" y1="318" x2="810" y2="352"/><line x1="870" y1="318" x2="870" y2="352"/><line x1="930" y1="318" x2="930" y2="352"/><line x1="990" y1="318" x2="990" y2="352"/><line x1="1050" y1="318" x2="1050" y2="352"/><line x1="1110" y1="318" x2="1110" y2="352"/><line x1="1170" y1="318" x2="1170" y2="352"/>
+</g>
+<!-- middle depth: the low branch, the singing nightingale, the still microphone -->
+<line x1="560" y1="268" x2="1130" y2="222" stroke="#100c08" stroke-width="13"/>
+<g>
+<ellipse cx="905" cy="196" rx="72" ry="40" fill="#6a5236"/>
+<polygon points="842,206 786,182 840,226" fill="#3a2c1c"/>
+<ellipse cx="968" cy="168" rx="30" ry="28" fill="#6a5236">
+<animate attributeName="cy" values="168;162;168;168;168" dur="12s" repeatCount="indefinite"/>
+</ellipse>
+<polygon points="992,158 1026,164 992,170" fill="#34281a"/>
+<g>
+<polygon points="992,172 1022,182 990,180" fill="#34281a"/>
+<animateTransform attributeName="transform" type="rotate" values="0 992 172;14 992 172;0 992 172;14 992 172;0 992 172;0 992 172" keyTimes="0;0.08;0.16;0.24;0.32;1" dur="12s" repeatCount="indefinite"/>
+</g>
+<circle cx="972" cy="160" r="5" fill="#e9c056"/>
+<path d="M 862 188 A 52 30 0 0 0 940 214" fill="none" stroke="#3a2c1c" stroke-width="5"/>
+</g>
+<!-- the microphone does nothing at all: a listener, still -->
+<g stroke="#0a0805" stroke-width="7"><line x1="905" y1="300" x2="905" y2="430"/></g>
+<ellipse cx="905" cy="282" rx="17" ry="24" fill="#0d0a06"/>
+<!-- near depth: a carried lantern crosses the lower edge, bobbing -->
+<g>
+<animateTransform attributeName="transform" type="translate" values="-120 0;1200 0" dur="26s" repeatCount="indefinite"/>
+<g>
+<animateTransform attributeName="transform" type="translate" values="0 0;0 -10;0 0;0 -8;0 0" dur="2.6s" repeatCount="indefinite"/>
+<ellipse cx="60" cy="472" rx="52" ry="26" fill="#e9c056" opacity="0.20">
+<animate attributeName="rx" values="52;60;52" dur="2.6s" repeatCount="indefinite"/>
+</ellipse>
+<rect x="44" y="440" width="32" height="42" rx="4" fill="#221b12" stroke="#e9c056" stroke-width="3"/>
+<rect x="52" y="452" width="16" height="18" fill="#e9c056"/>
+<line x1="60" y1="440" x2="60" y2="428" stroke="#e9c056" stroke-width="3"/>
+</g>
+</g>
+<rect y="492" width="1200" height="28" fill="#1a140d"/>
+</svg>

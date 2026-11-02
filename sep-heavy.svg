@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 60" role="img" aria-label="Major separator: a lantern line, a fine rule in moonlit moss carrying one lit lantern at its centre">
+<line x1="0" y1="30" x2="556" y2="30" stroke="#96a37a" stroke-width="3"/>
+<line x1="644" y1="30" x2="1200" y2="30" stroke="#96a37a" stroke-width="3"/>
+<g>
+<animateTransform attributeName="transform" type="translate" values="0 0;0 -3;0 0;0 2;0 0" dur="3.4s" repeatCount="indefinite"/>
+<rect x="584" y="10" width="32" height="40" rx="4" fill="#221b12" stroke="#e9c056" stroke-width="3"/>
+<rect x="592" y="21" width="16" height="18" fill="#e9c056"/>
+<line x1="600" y1="10" x2="600" y2="2" stroke="#e9c056" stroke-width="3"/>
+</g>
+</svg>

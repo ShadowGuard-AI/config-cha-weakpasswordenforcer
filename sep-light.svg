@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 60" role="img" aria-label="Minor separator: a lantern line shortened to the centre third, a fine rule in moonlit moss carrying one lit lantern at its centre">
+<line x1="400" y1="30" x2="562" y2="30" stroke="#96a37a" stroke-width="2"/>
+<line x1="638" y1="30" x2="800" y2="30" stroke="#96a37a" stroke-width="2"/>
+<g>
+<animateTransform attributeName="transform" type="translate" values="0 0;0 -2;0 0" dur="3.4s" repeatCount="indefinite"/>
+<rect x="588" y="14" width="24" height="32" rx="4" fill="#221b12" stroke="#e9c056" stroke-width="2"/>
+<rect x="595" y="23" width="10" height="13" fill="#e9c056"/>
+</g>
+</svg>
