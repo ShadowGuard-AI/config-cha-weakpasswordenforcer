@@ -1,12 +1,12 @@
-![Berkeley Square in the blackout before the broadcast: the low branch and the bird upon it with its throat lifted, fallen plane leaves on the pavement beneath the railings, plane tree trunks rising in a row, a microphone stand waiting unlit under the branch, curtained houses with one slit of light at one window, and a sky in moonlit moss, with no lettering anywhere](intro-banner.png)
+![A brass grille hatch open in a dark green speakeasy door close up, a keeper's eyes and warm lamplight in the slit, the brass grille panel swung aside, and a dim corridor beyond, with no lettering anywhere](intro-banner.png)
 
 # config-cha-WeakPasswordEnforcer
 
 Title block: the name above is set in Cherry Bomb One in eye gold on a bark plate ruled as a page of the night watch log, the hour entered first in small Cabin. A small nightingale glyph stands beside this heading and beside no other: 🐦. The remaining headings keep the log treatment, the hour noted and a small lantern at the left, without the bird, so that a long document stays quick to scan.
 
-![The nightingale on its branch in the lamplight, with the name lettered below in eye gold](logo.png)
+![A panelled door with a small brass grille hatch half open and a lamp glowing behind it, set in a plain ring](logo.png)
 
-![Berkeley Square held wide and dark, the nightingale singing from a low branch, the broadcast microphone waiting beneath the tree, and the title lettered only across the wooden board that fronts the broadcast position](banner.png)
+![A dim corridor before a dark panelled speakeasy door, a keeper's eyes at the opened brass grille, a visitor in a long coat standing before the door with a hat in his hand, bare walls and one shaded wall lamp, with no lettering anywhere](banner.png)
 
 ![The square in three depths: the houses, railings, and trunks still, the outermost leaves stirring faintly, the nightingale lifting its throat and singing in repeated phrases above a microphone that does nothing at all, and a carried lantern bobbing across the lower edge](scene.svg)
 
